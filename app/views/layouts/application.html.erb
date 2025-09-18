@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+    <title><%= full_title(yield(:title)) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -20,10 +20,15 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+
 </head>
 
 <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+    </div>
 </body>
 
 </html>
