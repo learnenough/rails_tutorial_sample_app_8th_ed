@@ -5,7 +5,7 @@ ruby "3.4.3"
 
 gem "rails", "8.0.2"
 gem "jsbundling-rails", "1.3.1"
-gem "bcrypt", "3.1.13"
+gem "bcrypt", "3.1.20"
 gem "cssbundling-rails", "1.4.3"
 gem "propshaft", "1.2.1"
 gem "importmap-rails", "2.1.0"
