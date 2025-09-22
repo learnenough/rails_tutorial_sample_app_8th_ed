@@ -5,8 +5,8 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <span class="visually-hidden">Toggle navigation</span>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <%= link_to "Home", root_path, class: "nav-link" %>
@@ -15,15 +15,14 @@
                         <%= link_to "Help", help_path, class: "nav-link" %>
                     </li>
                     <% if logged_in? %>
-                    <li><%= link_to "Users", '#', class: "nav-link" %></li>
+                    <li><%= link_to "Users", users_path, class: "nav-link" %></li>
                     <li class="dropdown nav-link">
-
                         <a href="#" id="account" class="dropdown-toggle" data-bs-toggle="dropdown">
                             Account <b class="caret"></b>
                         </a>
                         <ul id="dropdown-menu" class="dropdown-menu">
                             <li><%= link_to "Profile", current_user %></li>
-                            <li><%= link_to "Settings", '#' %></li>
+                            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                             <li class="divider"></li>
                             <li>
                                 <%= link_to "Log out", logout_path,
