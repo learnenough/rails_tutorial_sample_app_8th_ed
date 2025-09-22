@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.4.3"
 
 gem "rails", "8.0.2"
+gem "active_storage_validations", "3.0.2"
 gem "jsbundling-rails", "1.3.1"
 gem "bcrypt", "3.1.13"
 gem "faker", "3.5.2"
@@ -42,4 +43,5 @@ end
 
 group :production do
   gem "pg", "1.5.9"
+  gem "aws-sdk-s3", "1.199.0", require: false
 end
